@@ -1,0 +1,35 @@
+
+<template name="postItem">
+  <div class="post">
+    <div class="post-content">
+      <h3>{{title}}</h3>
+			<p>
+			  {{ url }}
+			</p>
+      <p>
+        {{author}},
+        <a href="{{pathFor 'postPage'}}" class="asdasd" >{{pluralize commentsCount "comment"}}</a>
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+      </p>
+    </div>
+  </div>
+</template>
+
+<template name="shortPost">
+  <div class="post">
+    <div class="post-content">
+      <h3>{{title}}</h3>
+			<p>
+			  {{ shortUrl }}
+			</p>
+      <p>
+        {{author}},
+        <a href="{{pathFor 'postPage'}}" class="asdasd" >{{pluralize commentsCount "comment"}}</a>
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+      </p>
+    </div>
+  </div>
+</template>
+
+
+
